@@ -12,8 +12,10 @@ import com.softinsa.course.entities.User;
 public class UserResource {
 
 	@GetMapping
+	//RespondeEntity retorna resposta de requisições web
 	public ResponseEntity<User> findAll(){
 		User u = new User(1L, "Maria", "maria@gmail.com", "999999999", "12345");
+		//Retornar resposta OK no http
 		return ResponseEntity.ok().body(u);
 	}
 }
